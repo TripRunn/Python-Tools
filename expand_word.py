@@ -1,11 +1,12 @@
 # Author:TripRunn
-import requests
+
 import re
 import json
-import xlrd
-import xlwt
 import time
 import random
+import xlrd
+import xlwt
+import requests
 from fake_useragent import UserAgent
 
 
@@ -14,11 +15,11 @@ def read_excel():
     读取excel文件中的A列，从A2到最后
     :return:list, 需要拓展的关键词列表
     """
-    path = r'C:\Users\Admin\Desktop\脚本控制拓指数关键词.xlsx'  # 文件路径
+    path = r'C:\Users\Admin\Desktop\脚本拓词.xlsx'  # 文件路径
     x1 = xlrd.open_workbook(path, encoding_override="utf-8")
-    sheet1 = x1.sheet_by_name("待拓词")  # excel工作表名字
+    sheet1 = x1.sheet_by_name("Sheet1")  # excel工作表名字
     nrows = sheet1.nrows  # 读总行数
-    words = sheet1.col_values(0, 1, nrows)  # 取第一列 第二行到最后一行
+    words = sheet1.col_values(0, 0, nrows)  # 取第一列 第二行到最后一行
     return words
 
 
