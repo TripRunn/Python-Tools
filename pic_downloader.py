@@ -1,11 +1,12 @@
 # Author:TripRunn
 # 图片下载器
-from urllib import request
-import requests
+
 import json
 import os
 import sys
 import time
+import requests
+from urllib import request
 
 keyword = input("图片关键词：")
 start = input("图片起始位置：")
@@ -16,8 +17,7 @@ lens = sum = int(lens)
 num = 0
 bar = ""
 
-dirpath = r"F:\image\{}".format(keyword)
-# dirpath = os.path.join(os.getcwd(), keyword)
+dirpath = os.path.join(os.getcwd(), keyword)
 isExists = os.path.exists(dirpath)
 if not isExists:
     os.mkdir(dirpath)
