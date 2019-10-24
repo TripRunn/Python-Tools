@@ -29,7 +29,7 @@ def write_excel(dic):
     :dic: dict, key为待拓展的关键词，value为对应的拓展结果
     """
     i = 1
-    print("--------------开始写入excel---------")
+    print("--------------开始写入excel--------")
     try:
         workbook = xlwt.Workbook()  # 新建文件
         sheet = workbook.add_sheet('1')
