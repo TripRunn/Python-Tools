@@ -13,7 +13,6 @@ start = input("图片起始位置：")
 lens = input("想要下载的图片个数：")
 start = int(start)
 lens = sum = int(lens)
-
 num = 0
 bar = ""
 
