@@ -13,7 +13,7 @@ from fake_useragent import UserAgent
 
 def read_excel():
     """
-    读取excel文件中的A列，从A2到最后
+    读取excel文件中的A列，从A1到最后
     :return:list, 需要拓展的关键词列表
     """
     path = os.path.join(os.getcwd(), '脚本拓词.xlsx')
